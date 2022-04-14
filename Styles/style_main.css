@@ -1,0 +1,150 @@
+/* Stile per le parti da cambiare */
+
+
+.box{
+    position: relative;
+    width: 100%;
+    height: max-content;
+    padding: 20px;
+    display: grid;
+    grid-template-areas: 
+    "asset asset asset asset"
+    "info world world world"
+    "pieChart pieChart barChart barChart";
+
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+
+    grid-gap: 20px;
+    
+    background: rgba(59, 89, 147, 0.11);
+}
+
+.box .assetInfo{
+    position: relative;
+    grid-area: asset;
+    background: var(--white);
+    padding: 30px;
+    box-shadow: 0 7px 25px rgba(0,0,0 ,0.15);
+    border-radius: 20px;
+    display: flex;
+    justify-content: space-between;
+    height: auto;
+}
+
+.box .assetInfo .info2 a{
+    text-decoration: underline;
+    color: var(--black2);
+    font-weight: 400;
+    
+
+}
+
+.box .map #worldMap{
+    position: relative;
+    background: var(--white);
+    padding: 15px;
+    padding-right: 0;
+    width: 100%;
+    height: 500px;
+    overflow: hidden;
+}
+.box #info3{
+    position: relative;
+    grid-area: info;
+    background: var(--white);
+    padding: 20px;
+    box-shadow: 0 7px 25px rgba(0,0,0 ,0.15);
+    border-radius: 20px;
+    display: block;
+    justify-content: space-between;
+    height: auto;
+    width: 100%;
+    font-size: 1rem;
+    font-weight: 500;
+}
+.box #info3 #info4{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    font-size: 1.2em;
+    font-weight: 400;
+    color: var(--black2);
+    top:45px;
+    left: 10px;
+}
+
+.loading {
+    margin-top: 10em;
+    text-align: center;
+    color: gray;
+}
+
+.box #pieChartByGender{
+    position: relative;
+    grid-area: pieChart;
+    background: var(--white);
+    padding: 15px;
+    padding-right: 0;
+    box-shadow: 0 7px 25px rgba(0,0,0 ,0.15);
+    border-radius: 20px;
+    display: flex;
+    justify-content: space-between;
+    height: auto;
+}
+
+.box #BarChartByAge{
+    position: relative;
+    grid-area: barChart;
+    background: var(--white);
+    padding: 15px;
+    box-shadow: 0 7px 25px rgba(0,0,0 ,0.15);
+    border-radius: 20px;
+    display: flex;
+    justify-content: space-between;
+    height: auto;
+    padding-right: 0;
+}
+
+
+.info1{
+    position: relative;
+    font-size: 1.8em;
+    font-weight: 500;
+    color: var(--black1);
+}
+
+.info2{
+    font-size: 1.2em;
+    font-weight: 300;
+    color:var(--black2);
+    margin-top: 5px;
+}
+
+.box .assetInfo .logo{
+    font-size: 3.5em;
+    color: var(--black2);
+}
+
+.box .map{
+    position: relative;
+    grid-area: world;
+    background: var(--white);
+    padding: 5px;
+    box-shadow: 0 7px 25px rgba(0,0,0 ,0.15);
+    border-radius: 20px;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    height:600px;
+}
+
+
+.box #info3 h4{
+    position: relative;
+    z-index: 99;
+    height: 10px;
+    width:max-content;
+    font-size: 1.5rem;
+    font-weight: 500;
+    color: var(--black1);
+}

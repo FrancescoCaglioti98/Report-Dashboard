@@ -1,0 +1,264 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+:root{
+    --blue: #287bff;
+    --white: #fff;
+    --grey: #f5f5f5;
+    --black1: #222;
+    --black2: #999;
+    --white2: rgb(230, 230, 233);
+}
+
+body{
+    min-height: 100vh;
+    overflow-x: hidden;
+
+}
+
+.container{
+    position: relative;
+    width: 100%;
+}
+
+.navigation
+{
+    position: fixed;
+    width: 300px;
+    height: 100%;
+    background: rgb(16,16,23);
+    background: linear-gradient(0deg, rgba(16,16,23,1) 8%, rgba(16,16,23,1) 23%, rgba(25,27,38,1) 40%, rgba(35,40,55,1) 54%, rgba(48,57,79,1) 64%, rgba(75,95,134,1) 80%, rgba(87,113,160,1) 92%);
+    border-left: 10px solid transparent;
+    transition: 0.5s;
+    overflow: hidden;
+}
+
+.navigation.active{
+    width: 80px;
+}
+
+
+.navigation ul{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+
+.navigation ul li{
+    position: relative;
+    width: 200%;
+    list-style: none;
+    background: transparent;
+
+    border-top-left-radius: 30px;
+    border-bottom-left-radius: 30px;
+}
+
+.navigation ul li:hover{
+    background: var(--black2);
+}
+
+.navigation ul li:nth-child(1){
+    margin-bottom: 40px;
+    pointer-events: none;
+}
+
+.navigation ul li a{
+    position: relative;
+    display: block;
+    width: 100%;
+    display: flex;
+    text-decoration: none;
+    color: var(--white);
+}
+
+.navigation ul li:hover a{
+    color: var(--white);
+}
+
+
+.navigation ul li a .icon{
+    position: relative;
+    display: block;
+    min-width: 60px;
+    height: 60px;
+    line-height: 60px;
+    text-align: center;
+    margin-top: 5px;
+}
+
+
+.navigation ul li a .icon img{
+    font-size: 1.75rem;
+    max-height: 60px;
+}
+
+.navigation ul li a .icon ion-icon{
+    font-size: 1.75rem;
+}
+
+
+.navigation ul li a .title{
+    position: relative;
+    display: block;
+    padding: 0 10px;
+    height: 60px;
+    line-height: 60px;
+    text-align: start;
+    white-space: nowrap;
+
+}
+
+.navigation ul li a .title small{
+    font-size: 0.6em;
+    position: absolute;
+}
+
+/*main*/
+
+.main{
+    position: absolute;
+    width: calc(100% - 300px);
+    left: 300px;
+    min-height: 100vh;
+    background: var(--white);
+    transition: 0.5s;
+}
+
+.main.active{
+    width: calc(100% - 80px);
+    left: 80px;
+}
+
+
+.topbar{
+    width:100%;
+    height: 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 10;
+}
+
+.toggle{
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2.5em;
+    cursor: pointer;
+    bottom : 20px;
+    color: var(--black2);
+}
+
+/*FOOTER*/
+
+
+.footer{
+    position: relative;
+    width: 100%;
+    min-height: 20vh;
+    transition: 0.5s;
+    display: block;
+    bottom: 0px;
+    background: var(--black2);
+}
+
+.footer .inside{
+    width: 100%;
+    height: fit-content;
+    display: grid;
+
+    grid-template-areas: 
+    "socialMedia socialMedia"
+    "text link"
+    "copyright copyright";
+
+    grid-column: 1fr 1fr;
+    grid-row: 1fr 3fr 1fr;
+    grid-gap: 10px;
+    overflow: hidden;
+}
+
+.footer .inside .socialMedia{
+    grid-area: socialMedia;
+    display: inline;
+    text-align: center;;
+    position: relative;
+    padding: 5px;
+    width: 100%;
+}
+
+.footer .inside .socialMedia a{
+    text-decoration: none;
+    position: relative;
+    padding: 5px;
+    font-size: 1.7rem;
+    color: var(--white2);
+    margin: auto;
+}
+
+.footer .inside .text{
+    grid-area: text;
+    padding: 10px;
+    text-align: center;
+    color: var(--white2);
+}
+
+.footer .inside .links{
+    grid-area: link;
+    padding: 10px;
+}
+
+.footer .inside .links h4{
+    text-align: center;
+    padding-bottom: 5px;
+    font-weight: 700;
+    font-size: 1.3rem;
+}
+
+.footer .inside .links .listaLink li{
+    list-style: none;
+}
+
+.footer .inside .links .listaLink li::before{
+    content:'🡒';
+    position: relative;
+    color: var(--white2);
+}
+
+.footer .inside .links .listaLink li a{
+    text-decoration: none;
+    color: var(--white2);
+}
+
+.footer .inside .copyright{
+    grid-area: copyright;
+    width: 100%;
+    max-width: auto;
+    text-align: center;
+}
+
+.info1{
+    position: relative;
+    font-size: 1.8em;
+    font-weight: 500;
+    color: var(--black1);
+}
+
+
+.info2{
+    font-size: 1.2em;
+    font-weight: 300;
+    color:var(--black2);
+    margin-top: 5px;
+}

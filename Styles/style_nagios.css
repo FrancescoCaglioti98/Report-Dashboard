@@ -1,0 +1,28 @@
+/* Stile per le parti da cambiare */
+
+
+.box{
+    position: relative;
+    width: 100%;
+    height: 980px ;
+    display: block;
+    background: rgba(59, 89, 147, 0.11);
+}
+
+.false {
+    color: rgb(145, 44, 44);
+}
+
+.true{
+    color: rgb(15, 221, 43)
+}
+
+
+.val {
+    background-color: rgba(12, 44, 114, 0.411);
+}
+
+#myGrid{
+    width: 100%; 
+    height: 100%;
+}

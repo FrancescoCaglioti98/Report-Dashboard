@@ -1,0 +1,234 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+.box{
+    position: relative;
+    width: 100%;
+    height: max-content;
+    grid-gap: 20px;
+
+    padding: 0.8rem;
+    
+    background: rgba(59, 89, 147, 0.11);
+}
+
+
+.section{
+    position:relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 40px;
+    box-shadow: 0 7px 25px rgba(0,0,0 ,0.15);
+    background-color: var(--white);
+    border-radius: 20px;
+    margin-top: 10px;
+}
+
+
+
+
+#box{
+    background-color: rgba(59, 89, 147, 0.11);
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+#accordion-container {
+    position: relative;
+}
+#accordion-container button::before {
+    content: '+' !important;
+}
+#accordion-container.active button::before {
+    content: '-' !important;
+}
+
+
+
+#accordion-container .accordion-text {
+    display: none;
+    color: #808080;
+    padding: 15px;
+    border: 1px solid #ffcc4b;
+}
+/* .accordion-btn.open + .accordion-text{
+    display: block;
+} */
+
+#shared-container {
+    position: absolute;
+    display: block;
+    width: 80%;
+    box-shadow: 0 7px 25px rgba(0,0,0 ,0.15);
+    border: 1px solid rgba(0, 0, 0, 0.18) ;
+    display: none;
+    background-color: var(--grey);
+}
+#shared-container.active {
+    display: block;
+    text-align: center;
+}
+#usage{
+    max-width: 30%;
+}
+
+
+#title{
+    position:relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 98%;
+    height: fit-content;
+    box-shadow: 0 7px 25px rgba(0,0,0 ,0.25);
+    background-color: var(--white);
+    border-radius: 20px;
+    margin: 10px 15px;
+    font-size: 2.5rem;
+    top:5%;
+    left: 5px;
+    background-color: aliceblue;
+}
+
+.plot{
+    position: relative;
+    background: white;
+    box-shadow: 0 7px 25px rgba(0,0,0 ,0.15);
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-items: center;
+    height: auto;
+    width: fit-content;
+    padding-right: 0;
+    margin: 10px 15px;
+    overflow: hidden;
+}
+
+
+.testIt{
+    position: relative;
+    z-index: 99;
+    margin: 15px;
+    height: auto;
+    width: 100%;
+    background: transparent;
+}
+
+
+
+#toggler{
+    position: relative;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2.5em;
+    cursor: pointer;
+    margin : 10px;
+    color: var(--black2);
+    z-index: 2;
+}
+
+
+
+.false {
+    background-color: rgb(145, 44, 44);
+}
+
+.true{
+    background-color: rgb(15, 221, 43)
+}
+
+
+h1{
+    margin: auto !important;
+    padding-left: 5% !important;
+}
+
+#info3{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 40px;
+    box-shadow: 0 7px 25px rgb(0 0 0 / 15%);
+    background-color: var(--white);
+    border-radius: 20px;
+    margin-top: 10px;
+    font-size: 1.5rem;
+}
+
+.info3{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 40px;
+    margin-top: 10px;
+    font-size: 1.5rem;
+}
+
+#info4{
+    position: relative;
+    display: block;
+    padding: 0 10px;
+    height: 60px;
+    line-height: 60px;
+    text-align: center;
+    white-space: nowrap;
+    font-size: 2.5rem;
+    font-weight: 600;
+}
+
+#rows{
+    width: 100%;
+}
+
+.storage{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#capacity{
+    height: 115px;
+    width: 95%;
+}
+
+#ramCapacity{
+    height: 115px;
+    width: 95%;
+}
+
+.box > * {
+    margin: 0.7rem 0;
+}
+
+
+#energy > * {
+    margin: 0.7rem 0.2rem;
+}
+
+#rows > * {
+    margin: 0.7rem 0.2rem;
+}
+
+#networkStatus{
+    margin-top: 0.5rem;
+}
+
+#business{
+    height: 410px;
+    margin: 0.5rem;
+}

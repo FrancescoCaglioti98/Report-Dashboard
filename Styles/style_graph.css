@@ -1,0 +1,296 @@
+/* Stile per le parti da cambiare */
+
+
+.box{
+    position: relative;
+    width: 100%;
+    height: max-content;
+
+
+    display: grid;
+    grid-template-areas:
+    "kelony kelony kelony"
+    "inner1 inner inner2"
+    "exposure protection pattern"
+    "venn mercedes positioning"
+    "header header header"
+    "radar1 radar2 radar3";
+
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 20px;
+
+    background: rgba(59, 89, 147, 0.11);
+}
+
+
+.box .kelony{
+    position:relative;
+    grid-area: kelony;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 40px;
+    box-shadow: 0 7px 25px rgba(0,0,0 ,0.15);
+    background-color: var(--white);
+    border-radius: 20px;
+    margin-top: 10px;
+}
+
+.box .riskExposure{
+    position:relative;
+    grid-area: exposure;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 40px;
+    box-shadow: 0 7px 25px rgba(0,0,0 ,0.15);
+    background-color: var(--white);
+    border-radius: 20px;
+    margin-top: 10px;
+}
+
+.box .protectionSurface{
+    position:relative;
+    grid-area: protection;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 40px;
+    box-shadow: 0 7px 25px rgba(0,0,0 ,0.15);
+    background-color: var(--white);
+    border-radius: 20px;
+    margin-top: 10px;
+}
+
+.box .valuesPattern{
+    position:relative;
+    grid-area: pattern;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 40px;
+    box-shadow: 0 7px 25px rgba(0,0,0 ,0.15);
+    background-color: var(--white);
+    border-radius: 20px;
+    margin-top: 10px;
+}
+
+.box .header{
+    position:relative;
+    grid-area: header;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 40px;
+    box-shadow: 0 7px 25px rgba(0,0,0 ,0.15);
+    background-color: var(--white);
+    border-radius: 20px;
+    margin-top: 10px;
+}
+
+.box .valoriProtezione .riskRating{
+    width: fit-content;
+    height: fit-content;
+    background-color: var(--white);
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.box .valoriProtezione .riskRating img{
+    max-width: 65%;
+    max-height: 65%;
+}
+
+.box #graficoProtezione{
+    position: relative;
+    grid-area: inner2;
+    background: var(--white);
+    padding: 5px;
+    box-shadow: 0 7px 25px rgba(0,0,0 ,0.15);
+    border-radius: 20px;
+    display: flex;
+    justify-content: space-between;
+    height: 410px;
+    padding-right: 0;
+    margin-top:10px;
+}
+
+.box .valoriProtezione{
+    position: relative;
+    grid-area: inner1;
+    background: var(--white);
+    padding: 5px;
+    box-shadow: 0 7px 25px rgba(0,0,0 ,0.15);
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    width: 100%;
+    height: 410px;
+    padding-right: 0;
+    margin-top: 10px;
+    align-items: center;
+}
+
+.box #reportMensile{
+    position: relative;
+    grid-area: inner;
+    background: var(--white);
+    padding: 5px;
+    box-shadow: 0 7px 25px rgba(0,0,0 ,0.15);
+    border-radius: 20px;
+    display: flex;
+    justify-content: space-between;
+    height: 410px;
+    padding-right: 0;
+    margin-top:10px;
+}
+
+#value{
+    display: inline-block;
+    position: relative;
+    font-size: 1.2em;
+    font-weight: 400;
+    color: var(--black2);
+    top:10px;
+    left: 15px;
+}
+
+.box #vennDiagram{
+    position: relative;
+    grid-area: venn;
+    background: var(--white);
+    padding: 5px;
+    box-shadow: 0 7px 25px rgba(0,0,0 ,0.15);
+    border-radius: 20px;
+    display: flex;
+    justify-content: space-between;
+    height: auto;
+    padding-right: 0;
+}
+
+.box #star{
+    position: relative;
+    grid-area: mercedes;
+    background: var(--white);
+    padding: 5px;
+    box-shadow: 0 7px 25px rgba(0,0,0 ,0.15);
+    border-radius: 20px;
+    display: flex;
+    justify-content: space-between;
+    height: auto;
+    padding-right: 0;
+}
+
+.box #positioning{
+    position: relative;
+    grid-area: positioning;
+    background: var(--white);
+    padding: 5px;
+    box-shadow: 0 7px 25px rgba(0,0,0 ,0.15);
+    border-radius: 20px;
+    display: flex;
+    justify-content: space-between;
+    height: auto;
+    padding-right: 0;
+}
+
+.box #firstRadar{
+    position: relative;
+    grid-area: radar1;
+    background: var(--white);
+    padding: 5px;
+    box-shadow: 0 7px 25px rgba(0,0,0 ,0.15);
+    border-radius: 20px;
+    display: flex;
+    justify-content: space-between;
+    height: auto;
+    padding-right: 0;
+}
+
+
+.box #secondRadar{
+    position: relative;
+    grid-area: radar2;
+    background: var(--white);
+    padding: 5px;
+    box-shadow: 0 7px 25px rgba(0,0,0 ,0.15);
+    border-radius: 20px;
+    display: flex;
+    justify-content: space-between;
+    height: auto;
+    padding-right: 0;
+}
+
+
+.box #thirdRadar{
+    position: relative;
+    grid-area: radar3;
+    background: var(--white);
+    padding: 5px;
+    box-shadow: 0 7px 25px rgba(0,0,0 ,0.15);
+    border-radius: 20px;
+    display: flex;
+    justify-content: space-between;
+    height: auto;
+    padding-right: 0;
+}
+
+
+.info1{
+    position: relative;
+    font-size: 1.4em;
+    font-weight: 500;
+    color: var(--black1);
+    margin-left: 15px;
+}
+
+.highcharts-data-table table {
+    min-width: 320px;
+    max-width: 700px;
+    margin: 1em auto;
+}
+
+.highcharts-data-table table {
+    font-family: Verdana, sans-serif;
+    border-collapse: collapse;
+    border: 1px solid #ebebeb;
+    margin: 10px auto;
+    text-align: center;
+    width: 100%;
+    max-width: 500px;
+}
+
+.highcharts-data-table caption {
+    padding: 1em 0;
+    font-size: 1.2em;
+    color: #555;
+}
+
+.highcharts-data-table th {
+    font-weight: 600;
+    padding: 0.5em;
+}
+
+.highcharts-data-table td,
+.highcharts-data-table th,
+.highcharts-data-table caption {
+    padding: 0.5em;
+}
+
+.highcharts-data-table thead tr,
+.highcharts-data-table tr:nth-child(even) {
+    background: #f8f8f8;
+}
+
+.highcharts-data-table tr:hover {
+    background: #f1f7ff;
+}

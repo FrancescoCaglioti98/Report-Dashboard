@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="Dashboard" content="width= device-width, initial-scale=1.0">
+        <title>Dashboard|Company Name</title>
+
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/fontawesome.min.css" integrity="sha384-jLKHWM3JRmfMU0A5x5AkjWkw/EYfGUAGagvnfryNV3F9VqM98XiIH7VBGVoxVSc7" crossorigin="anonymous">
+        <link rel="stylesheet" type="text/css" href="../Styles/style_main.css">
+        <link rel="stylesheet" type="text/css" href="../Styles/style_general.css">
+
+
+        <script src="https://code.highcharts.com/highcharts.js"></script>
+
+        <script src="../JS/charts_mainPage.js"></script>
+
+
+        <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+  
+
+  <script type="text/javascript">
+
+      var regionsData = [
+              ['Country', 'Popularity'],
+              ['Germany', 200],
+              ['United States', 300],
+              ['Brazil', 400],
+              ['Canada', 500],
+              ['France', 600],
+              ['Russia', 559],
+              ['Iceland', 100],
+              ['Australia', 358],
+              ['New Zealand', 469],
+              ['India', 892],
+              ['Saudi Arabia', 490],
+              ['Norway', 789],
+              ['Italy', 950],
+              ['Austria',460],              
+              ['Holland', 359],
+              ['Ukraine', 450],
+              ['Afghanistan',530],
+              ['South Africa', 259],
+              ['Cuba', 150]
+            ];
+
+    document.addEventListener('DOMContentLoaded', function(){
+
+        const externalDiv = document.getElementById('info3');
+
+        for(i = 1 ; i<regionsData.length ; i++){
+            const innerDiv = document.createElement('div');
+            var string = regionsData[i][0]+ ": "+regionsData[i][1];
+
+            innerDiv.setAttribute('id', 'info4');
+            var text = document.createTextNode(string);
+            innerDiv.appendChild(text);
+            externalDiv.appendChild(innerDiv);
+
+        }
+    });
+
+          google.charts.load('current', {
+            'packages':['geochart'],
+          });
+          google.charts.setOnLoadCallback(drawRegionsMap);
+    
+          function drawRegionsMap() {
+            var data = google.visualization.arrayToDataTable(regionsData);
+    
+            var options = {
+                colors: ['#fffed4','#f1f8ae','#cce8b3', '#82cbbc', '#42b6cc', '#42b6cc', '#275db2', '#0e2c83'],
+                datalessRegionColor: '#fff',
+                defaultColor: '#f5f5f5',
+                minValue: 0,
+                keepAspectRatio: true
+            };
+    
+            var chart = new google.visualization.GeoChart(document.getElementById('worldMap'));
+            chart.draw(data, options);
+
+            
+            window.addEventListener('resize', drawRegionsMap, false);
+          }
+        </script>
+
+    </head>
+
+    <body>
+        <div class="container">
+            <div class="navigation">
+
+                <ul>
+                    <li>
+                        <a href="#">
+                            <span class="icon"><ion-icon name="browsers-outline"></ion-icon></span>
+                            <span class="title"><h3>Company</h3></span>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="./index.html">
+                            <span class="icon"><ion-icon name="home-outline"></ion-icon></span>
+                            <span class="title">Home</span>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="./graph.html">
+                            <span class="icon"><ion-icon name="pie-chart-outline"></ion-icon></span>
+                            <span class="title">Graphs</span>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="./nagios_data.html">
+                            <span class="icon"><ion-icon name="analytics-outline"></ion-icon></span>
+                            <span class="title">Table</span>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="./rossi.html">
+                            <span class="icon"><ion-icon name="accessibility-outline"></ion-icon></span>
+                            <span class="title">Network and Other Data</span>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="./pdf.html">
+                            <span class="icon"><ion-icon name="stats-chart-outline"></ion-icon></span>
+                            <span class="title">Links to PDF</span>
+                        </a>
+                    </li>
+
+                </ul>
+
+                <div class="topbar">
+                    <div class="toggle">
+                        <ion-icon name="menu-outline"></ion-icon>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- MAIN-->
+
+            <main class="main">
+<!-- Da qua parte la zona da cambiare per il cambio delle pagine-->
+                    <div class="box">
+                        <div class="assetInfo">
+
+                            <div>
+                                <div class="info1">Company Name</div>
+
+                                <div class="info2">
+                                    <b>Informations:</b>....<br>
+                                    <b>Informations: </b>...<br>
+                                    <b>Informations: </b>....<br>
+                                    <b>Web Site: </b><a href="" role="button" rel="noopener noreferrer" target="_blank">link to the web page</a>
+                                </div>
+
+                            </div>
+
+                            <div class="logo">
+                                <ion-icon name="logo-buffer"></ion-icon>
+                            </div>
+
+                        </div>
+
+                        <div id="info3">
+                            <h4>World Map for the Country Impression</h4>
+                            <br>
+                            <div id='info4'></div>
+                        </div>
+
+                        <div class="map">
+                            <div id="worldMap">
+                                <div class="loading"></div>
+                             </div>
+                        </div>
+
+                        <div id="pieChartByGender"></div>
+
+                                                
+                        <div id="BarChartByAge"></div>
+
+                    </div>
+<!--Finisce qua-->
+
+                    
+
+                <footer class="footer">               
+                    <!-- Grid container -->
+                        <div class="inside">
+                        <!-- Section: Social media -->
+                        <div class="socialMedia">
+                        <!-- Facebook -->
+                        <a href="https://www.facebook.com" role="button" rel="noopener noreferrer" target="_blank"><ion-icon name="logo-facebook"></ion-icon></a>
+                    
+                        <!-- Twitter -->
+                        <a href="https://twitter.com/" role="button" rel="noopener noreferrer" target="_blank"><ion-icon name="logo-twitter"></ion-icon></a>
+                
+                        <!-- Linkedin -->
+                        <a href="https://mc.linkedin.com/" role="button" rel="noopener noreferrer" target="_blank"><ion-icon name="logo-linkedin"></ion-icon></i></a>
+                
+                        </div>
+                        <!-- Section: Social media -->
+                    
+                        <!-- Section: Text -->
+                        <div class="text">
+                            <p>Some information about the company</p>
+                        </div>
+                        <!-- Section: Text -->
+                    
+                        <!-- Section: Links -->
+                        <div class="links">
+                            <h4 class="text-uppercase">Our World</h4>
+                    
+                            <ul class="listaLink">
+                                <li>
+                                <a href="" class="text-white" rel="noopener noreferrer" target="_blank">Link 1</a>
+                                </li>
+                                <li>
+                                <a href="" class="text-white" rel="noopener noreferrer" target="_blank">Link 2</a>
+                                </li>
+                                <li>
+                                <a href="" class="text-white" rel="noopener noreferrer" target="_blank">Link 3</a>
+                                </li>
+                                <li>
+                                <a href="" class="text-white" rel="noopener noreferrer" target="_blank">Link 4</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <!-- Section: Links -->
+                    
+                    <!-- Copyright -->
+                            <div class="copyright">
+                                © 2022 Copyright: Francesco Caglioti
+                            </div>
+                    <!-- Copyright -->
+
+                    </div>
+                </footer>
+            </main>
+
+        </div>
+
+
+        <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+        <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+
+
+        <script>
+            //Menu Toggle
+
+            let toggle = document.querySelector(".toggle");
+            let navigation = document.querySelector(".navigation");
+            let main = document.querySelector(".main");
+            let footer = document.querySelector(".footer");
+
+
+            toggle.onclick = function(){
+                navigation.classList.toggle('active');
+                main.classList.toggle('active');
+                footer.classList.toggle('active');
+            }
+        </script>
+    </body>
+</html>

@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="Dashboard" content="width= device-width, initial-scale=1.0">
+        <title>Dashboard|Company Name</title>
+
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/fontawesome.min.css" integrity="sha384-jLKHWM3JRmfMU0A5x5AkjWkw/EYfGUAGagvnfryNV3F9VqM98XiIH7VBGVoxVSc7" crossorigin="anonymous">
+        <link rel="stylesheet" type="text/css" href="../Styles/style_nagios.css">
+        <link rel="stylesheet" type="text/css" href="../Styles/style_general.css">
+
+
+
+        <script src="https://unpkg.com/ag-grid-community/dist/ag-grid-community.min.noStyle.js"></script>
+        <link rel="stylesheet" href="https://unpkg.com/ag-grid-community/dist/styles/ag-grid.css">
+        <link rel="stylesheet" href="https://unpkg.com/ag-grid-community/dist/styles/ag-theme-alpine-dark.css">
+
+        <script src="../JS/report_nagios.js"></script>
+
+
+    </head>
+
+    <body>
+        <div class="container">
+            <div class="navigation">
+
+                <ul>
+                    <li>
+                        <a href="#">
+                            <span class="icon"><ion-icon name="browsers-outline"></ion-icon></span>
+                            <span class="title"><h3>Company</h3></span>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="./index.html">
+                            <span class="icon"><ion-icon name="home-outline"></ion-icon></span>
+                            <span class="title">Home</span>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="./graph.html">
+                            <span class="icon"><ion-icon name="pie-chart-outline"></ion-icon></span>
+                            <span class="title">Graphs</span>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="./nagios_data.html">
+                            <span class="icon"><ion-icon name="analytics-outline"></ion-icon></span>
+                            <span class="title">Table</span>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="./rossi.html">
+                            <span class="icon"><ion-icon name="accessibility-outline"></ion-icon></span>
+                            <span class="title">Network and Other Data</span>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="./pdf.html">
+                            <span class="icon"><ion-icon name="stats-chart-outline"></ion-icon></span>
+                            <span class="title">Links to PDF</span>
+                        </a>
+                    </li>
+
+                </ul>
+
+                <div class="topbar">
+                    <div class="toggle">
+                        <ion-icon name="menu-outline"></ion-icon>
+                    </div>
+
+                </div>
+            </div>
+                <!-- MAIN-->
+
+                <div class="main">
+                    <div class="box">
+                        <div id="myGrid" class="ag-theme-alpine-dark"></div>
+
+
+
+                        
+                                    
+                    </div>
+                 
+
+                </div>
+
+        </div>
+
+
+        <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+        <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+
+
+        <script>
+            //Menu Toggle
+
+            let toggle = document.querySelector(".toggle");
+            let navigation = document.querySelector(".navigation");
+            let main = document.querySelector(".main");
+
+
+            toggle.onclick = function(){
+                navigation.classList.toggle('active');
+                main.classList.toggle('active');
+            }
+        </script>
+    </body>
+</html>
